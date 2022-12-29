@@ -13,8 +13,8 @@ URL: http://pubs.acs.org/doi/abs/10.1021/ci400466r
 ## Model List
 
 Our released models are listed as following. You can import these models by using the `smiles-featurizers` package or using [HuggingFace's Transformers](https://github.com/huggingface/transformers).
-| Model | Type |
-|:-------------------------------|:--------:|AUROC| BEDROC|
+| Model | Type |AUROC| BEDROC|
+|:-------------------------------|:--------:|:--------:|:--------:|
 | [shahrukhx01/smole-bert](https://huggingface.co/shahrukhx01/smole-bert) | `Bert`|0.615 $\pm$ 0.18| 0.225 $\pm$ 0.102|
 | [shahrukhx01/smole-bert-mtr](https://huggingface.co/shahrukhx01/smole-bert-mtr) | `Bert`|0.621 $\pm$ 0.121| 0.262 $\pm$ 0.113|
 | [shahrukhx01/smole-bart](https://huggingface.co/shahrukhx01/smole-bart) | `Bart`|0.660 $\pm$ 0.104| 0.263 $\pm$ 0.111|
