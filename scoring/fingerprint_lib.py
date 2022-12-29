@@ -78,29 +78,14 @@ fpdict["rdk6"] = lambda m: Chem.RDKFingerprint(
 fpdict["rdk7"] = lambda m: Chem.RDKFingerprint(
     m, maxPath=7, fpSize=nbits, nBitsPerHash=2
 )
-fpdict["bert"] = lambda m: Chem.RDKFingerprint(
-    m, maxPath=7, fpSize=nbits, nBitsPerHash=2
-)
-fpdict["sbert"] = lambda m: Chem.RDKFingerprint(
+fpdict["transformers"] = lambda m: Chem.RDKFingerprint(
     m, maxPath=7, fpSize=nbits, nBitsPerHash=2
 )
 
 
 def CalculateFP(fp_name, smiles, model=None):
-    if fp_name == "molbert":
-        features = model.encode([smiles])[0]
+    if fp_name == "transformers":
+        features = model.embed([smiles])[0]
         return features
-    elif fp_name == "bert":
-        print(smiles)
-        return model.encode_corpus(smiles)[0]
-    elif fp_name == "sbert":
-        embeddings = model.encode(smiles)
-        print(embeddings.shape)
-        return embeddings
-
-    m = Chem.MolFromSmiles(smiles)
-
-    if m is None:
-        raise ValueError("SMILES cannot be converted to a RDKit molecules:", smiles)
-
-    return fpdict[fp_name](m)
+    else:
+        raise NotImplementedError
