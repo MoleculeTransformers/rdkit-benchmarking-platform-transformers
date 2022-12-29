@@ -45,7 +45,7 @@ python calculate_scored_lists_transformers.py -n 5 -f config.txt -s EmbedCosine 
 ### 2. Validation
 
 ```bash
-cd validation/data_sets_1/
+cd ../validation/data_sets_1/
 ```
 
 ```bash
@@ -63,7 +63,7 @@ python calculate_validation_methods.py -m methods.txt -i fingerprints  -o <name-
 ### 3. Analysis
 
 ```bash
-cd analysis/data_sets_1/
+cd ../analysis/data_sets_1/
 ```
 
 ```bash
