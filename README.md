@@ -26,7 +26,7 @@ Our released models are listed as following. You can import these models by usin
 The virtual-screening process implemented by the benchmarking
 platform is divided into three steps:
 
-0. Setup
+### 0. Setup
 
 ```bash
 cd scoring/data_sets_1/
@@ -36,13 +36,13 @@ cd scoring/data_sets_1/
 mkdir <name-of-fingerprints-directory>
 ```
 
-1. Scoring
+### 1. Scoring
 
 ```bash
 python calculate_scored_lists_transformers.py -n 5 -f config.txt -s EmbedCosine -m shahrukhx01/smole-bert -t bert -o <name-of-fingerprints-directory>
 ```
 
-2. Validation
+### 2. Validation
 
 ```bash
 cd validation/data_sets_1/
@@ -60,7 +60,7 @@ mkdir <name-of-validation-results-directory>
 python calculate_validation_methods.py -m methods.txt -i fingerprints  -o <name-of-validation-results-directory> /
 ```
 
-3. Analysis
+### 3. Analysis
 
 ```bash
 cd analysis/data_sets_1/
