@@ -1,3 +1,0 @@
-# molbert std 
-AUC	0.669 0.068 
-BEDROC20	0.243 0.094 
