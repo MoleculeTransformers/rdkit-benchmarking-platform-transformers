@@ -1,4 +1,6 @@
-Benchmarking Platform
+# Benchmarking Platform
+Port of RDKit Benchmarking platform for pre-trained transformers-based language models for virtual screening drug discovery task.
+
 =====================
 original version presented in 
 S. Riniker, G. Landrum, J. Cheminf., 5, 26 (2013),
